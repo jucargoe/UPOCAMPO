@@ -1,0 +1,10 @@
+<odoo>
+  <record id="descuentos_list_action" model="ir.actions.act_window">
+    <field name="name">Descuentos</field>
+    <field name="res_model">upocampo.descuentos</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">Create the firstclass</p>
+    </field>
+  </record>
+</odoo>

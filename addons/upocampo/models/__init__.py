@@ -1,3 +1,4 @@
 # -*- coding: utf-8 -*-
 
-from . import reserva
+from . import reservas
+from . import descuentos

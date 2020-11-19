@@ -1,0 +1,10 @@
+<odoo>
+  <!-- Top menu item -->
+  <menuitem name="upocampo" id="main_upocampo_menu" groups="group_upocampo_manager"/>
+  <!-- menu categories -->
+  <menuitem name="upocampo" id="upocampo_menu" groups="group_upocampo_manager" parent="main_upocampo_menu"/>
+
+  <!-- actions -->
+  <menuitem name="Reservas" id="reservas_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="reservas_list_action"/>
+  <menuitem name="Descuentos" id="descuentos_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="descuentos_list_action"/>
+</odoo>
