@@ -1,3 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 reservas_manager,reservas_manager,model_upocampo_reservas,group_upocampo_manager,1,1,1,1
 descuentos_manager,descuentos_manager,model_upocampo_descuentos,group_upocampo_manager,1,1,1,1
+habitaciones_manager,habitaciones_manager,model_upocampo_habitaciones,group_upocampo_manager,1,1,1,1
+clientes_manager,clientes_manager,model_upocampo_clientes,group_upocampo_manager,1,1,1,1
+inscripciones_manager,inscripciones_manager,model_upocampo_inscripciones,group_upocampo_manager,1,1,1,1
+actividades_manager,actividades_manager,model_upocampo_actividades,group_upocampo_manager,1,1,1,1
+empleados_manager,empleados_manager,model_upocampo_empleados,group_upocampo_manager,1,1,1,1
+puestos_manager,puestos_manager,model_upocampo_puestos,group_upocampo_manager,1,1,1,1

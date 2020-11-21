@@ -5,6 +5,12 @@
   <menuitem name="upocampo" id="upocampo_menu" groups="group_upocampo_manager" parent="main_upocampo_menu"/>
 
   <!-- actions -->
-  <menuitem name="Reservas" id="reservas_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="reservas_list_action"/>
+  <menuitem name="Actividades" id="actividades_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="actividades_list_action"/>
+  <menuitem name="Clientes" id="clientes_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="clientes_list_action"/>
   <menuitem name="Descuentos" id="descuentos_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="descuentos_list_action"/>
+  <menuitem name="Empleados" id="empleados_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="empleados_list_action"/>
+  <menuitem name="Habitaciones" id="habitaciones_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="habitaciones_list_action"/>
+  <menuitem name="Inscripciones" id="inscripciones_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="inscripciones_list_action"/>
+  <menuitem name="Puestos de trabajo" id="puestos_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="puestos_list_action"/>
+  <menuitem name="Reservas" id="reservas_menu" parent="upocampo_menu" groups="group_upocampo_manager" action="reservas_list_action"/>
 </odoo>

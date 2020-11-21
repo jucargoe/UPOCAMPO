@@ -25,6 +25,12 @@
         'security/ir.model.access.csv',
         'views/reservas_views.xml',
         'views/descuentos_views.xml',
+        'views/habitaciones_views.xml',
+        'views/clientes_views.xml',
+        'views/inscripciones_views.xml',
+        'views/actividades_views.xml',
+        'views/empleados_views.xml',
+        'views/puestos_views.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode
