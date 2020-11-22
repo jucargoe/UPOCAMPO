@@ -1,4 +1,32 @@
 <odoo>
+  <record id="clientes_form_view" model="ir.ui.view">
+    <field name="name">upocampo.clientes.form</field>
+    <field name="model">upocampo.clientes</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="apellidos"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="clientes_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.clientes.tree</field>
+    <field name="model">upocampo.clientes</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="nombre"/>
+        <field name="apellidos"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="clientes_list_action" model="ir.actions.act_window">
     <field name="name">Clientes</field>
     <field name="res_model">upocampo.clientes</field>

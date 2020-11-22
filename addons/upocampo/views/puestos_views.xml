@@ -1,4 +1,31 @@
 <odoo>
+  <record id="puestos_form_view" model="ir.ui.view">
+    <field name="name">upocampo.puestos.form</field>
+    <field name="model">upocampo.puestos</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="descripcion"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="puestos_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.puestos.tree</field>
+    <field name="model">upocampo.puestos</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="nombre"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="puestos_list_action" model="ir.actions.act_window">
     <field name="name">Puestos de trabajo</field>
     <field name="res_model">upocampo.puestos</field>

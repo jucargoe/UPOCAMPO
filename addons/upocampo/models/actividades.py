@@ -7,8 +7,9 @@ class Actividades(models.Model):
     _name = 'upocampo.actividades'
     _description = 'Actividades del hotel rural'
 
-    identificacion = fields.Integer('Identificacion:')
-    name = fields.Char('Nombre de Actividad:')
+    name = fields.Integer('Identificacion:')
+    nombre = fields.Char('Nombre de Actividad:')
     descripcion = fields.Text('Descripcion:')
     duracion = fields.Float('Duracion:')
-    id_empleado = fields.Integer('ID de Empleado:')
+    inscripciones_ids = fields.One2many('upocampo.inscripciones', 'actividad_id', 'Inscripciones:')
+    empleado_id = fields.Many2one('upocampo.empleados', 'Empleado:')

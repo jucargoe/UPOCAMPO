@@ -1,4 +1,46 @@
 <odoo>
+  <record id="habitaciones_form_view" model="ir.ui.view">
+    <field name="name">upocampo.habitaciones.form</field>
+    <field name="model">upocampo.habitaciones</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="estado"/>
+            <field name="foto"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="habitaciones_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.habitaciones.tree</field>
+    <field name="model">upocampo.habitaciones</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="estado"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="habitaciones_search_view" model="ir.ui.view">
+    <field name="name">upocampo.habitaciones.search</field>
+    <field name="model">upocampo.habitaciones</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="search_estado" string="Libre" domain="[('estado','=','libre')]"/>
+        <filter name="search_estado" string="Ocupado" domain="[('estado','=','ocupado')]"/>
+        <separator orientation="vertical" />
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_estad" string="Estado" context="{'group_by':'estado'}" />
+        </group>
+      </search>
+    </field>
+  </record>
+
   <record id="habitaciones_list_action" model="ir.actions.act_window">
     <field name="name">Habitaciones</field>
     <field name="res_model">upocampo.habitaciones</field>

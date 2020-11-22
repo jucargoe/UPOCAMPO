@@ -8,6 +8,6 @@ class Inscripciones(models.Model):
     _description = 'Inscripciones de las actividades del hotel rural'
 
     name = fields.Integer('Identificacion:')
-    id_actividad = fields.Integer('ID de Actividad:')
-    id_cliente = fields.Integer('ID de Cliente:')
+    actividad_id = fields.Many2one('upocampo.actividades', string='Actividad:')
+    cliente_id = fields.Many2one('upocampo.clientes', string='Cliente:')
     fecha = fields.Datetime('Fecha:', autodate=True)

@@ -1,4 +1,38 @@
 <odoo>
+  <record id="empleados_form_view" model="ir.ui.view">
+    <field name="name">upocampo.empleados.form</field>
+    <field name="model">upocampo.empleados</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="apellidos"/>
+            <field name="puesto_id" widget="many2one"/>
+            <field name="sueldo"/>
+            <field name="genero"/>
+            <field name="actividades_ids" widget="one2many"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="empleados_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.empleados.tree</field>
+    <field name="model">upocampo.empleados</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="nombre"/>
+        <field name="apellidos"/>
+        <field name="puesto_id" widget="many2one"/>
+        <field name="genero"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="empleados_list_action" model="ir.actions.act_window">
     <field name="name">Empleados</field>
     <field name="res_model">upocampo.empleados</field>

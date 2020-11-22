@@ -1,4 +1,31 @@
 <odoo>
+  <record id="descuentos_form_view" model="ir.ui.view">
+    <field name="name">upocampo.descuentos.form</field>
+    <field name="model">upocampo.descuentos</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="porcentaje"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="descuentos_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.descuentos.tree</field>
+    <field name="model">upocampo.descuentos</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="nombre"/>
+        <field name="porcentaje"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="descuentos_list_action" model="ir.actions.act_window">
     <field name="name">Descuentos</field>
     <field name="res_model">upocampo.descuentos</field>

@@ -1,4 +1,37 @@
 <odoo>
+  <record id="actividades_form_view" model="ir.ui.view">
+    <field name="name">upocampo.actividades.form</field>
+    <field name="model">upocampo.actividades</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="descripcion"/>
+            <field name="duracion"/>
+            <field name="inscripciones_ids" widget="one2many"/> <!-- TODO como se asignan las actividades ya creadas -->
+            <field name="empleado_id"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="actividades_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.actividades.tree</field>
+    <field name="model">upocampo.actividades</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="nombre"/>
+        <field name="descripcion"/>
+        <field name="duracion"/>
+        <field name="empleado_id"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="actividades_list_action" model="ir.actions.act_window">
     <field name="name">Actividades</field>
     <field name="res_model">upocampo.actividades</field>

@@ -8,4 +8,6 @@ class Habitaciones(models.Model):
     _description = 'Habitación del hotel rural'
 
     name = fields.Integer('Numero de habitacion:')
-    estado = fields.Selection([('ocupado', 'Ocupado'), ('libre', 'Libre')], 'Estado')
+    estado = fields.Selection([('ocupado', 'Ocupado'), ('libre', 'Libre')], 'Estado:')
+    foto = fields.Binary('Foto:')
+    reservas_ids = fields.Many2many('upocampo.reservas', string='Reserva asociada:')

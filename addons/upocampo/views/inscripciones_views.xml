@@ -1,4 +1,34 @@
 <odoo>
+  <record id="inscripciones_form_view" model="ir.ui.view">
+    <field name="name">upocampo.inscripciones.form</field>
+    <field name="model">upocampo.inscripciones</field>
+    <field name="arch" type="xml">
+      <form string="Classes">
+        <sheet layout="auto">
+          <group>
+            <field name="name"/>
+            <field name="actividad_id" widget="many2one"/>
+            <field name="cliente_id" widget="many2one"/>
+            <field name="fecha"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="inscripciones_tree_view" model="ir.ui.view">
+    <field name="name">upocampo.inscripciones.tree</field>
+    <field name="model">upocampo.inscripciones</field>
+    <field name="arch" type="xml">
+      <tree string="tree_string">
+        <field name="name"/>
+        <field name="actividad_id" widget="many2one"/>
+        <field name="cliente_id" widget="many2one"/>
+        <field name="fecha"/>
+      </tree>
+    </field>
+  </record>
+
   <record id="inscripciones_list_action" model="ir.actions.act_window">
     <field name="name">Inscripciones</field>
     <field name="res_model">upocampo.inscripciones</field>
