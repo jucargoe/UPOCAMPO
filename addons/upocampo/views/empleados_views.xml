@@ -24,12 +24,28 @@
     <field name="model">upocampo.empleados</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
+        <field name="id"/>
         <field name="name"/>
         <field name="nombre"/>
         <field name="apellidos"/>
         <field name="puesto_id" widget="many2one"/>
         <field name="genero"/>
       </tree>
+    </field>
+  </record>
+
+  <record id="empleados_search_view" model="ir.ui.view">
+    <field name="name">upocampo.empleados.search</field>
+    <field name="model">upocampo.empleados</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="search_genero" string="Hombre" domain="[('genero','=','hombre')]"/>
+        <filter name="search_genero" string="Mujer" domain="[('genero','=','mujer')]"/>
+        <separator orientation="vertical" />
+        <group expand="0" string="Agrupar por...">
+          <filter name="group_by_genero" string="Genero" context="{'group_by':'genero'}" />
+        </group>
+      </search>
     </field>
   </record>
 

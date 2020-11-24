@@ -10,5 +10,5 @@ class Clientes(models.Model):
     name = fields.Char('DNI:')
     nombre = fields.Char('Nombre:')
     apellidos = fields.Char('Apellidos:')
-    reservas_ids = fields.One2many('upocampo.reservas', 'cliente_id', 'Reservas:')
-    inscripciones_ids = fields.One2many('upocampo.inscripciones', 'cliente_id', 'Inscripciones:')
+    reservas_ids = fields.One2many('upocampo.reservas', 'name', 'Reservas:')
+    inscripciones_ids = fields.One2many('upocampo.inscripciones', 'name', 'Inscripciones:')

@@ -6,9 +6,8 @@
       <form string="Classes">
         <sheet layout="auto">
           <group>
-            <field name="name"/>
+            <field name="name" widget="many2one"/>
             <field name="actividad_id" widget="many2one"/>
-            <field name="cliente_id" widget="many2one"/>
             <field name="fecha"/>
           </group>
         </sheet>
@@ -21,9 +20,8 @@
     <field name="model">upocampo.inscripciones</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
-        <field name="name"/>
+        <field name="name" widget="many2one"/>
         <field name="actividad_id" widget="many2one"/>
-        <field name="cliente_id" widget="many2one"/>
         <field name="fecha"/>
       </tree>
     </field>

@@ -7,7 +7,6 @@
         <sheet layout="auto">
           <group>
             <field name="name"/>
-            <field name="nombre"/>
             <field name="descripcion"/>
           </group>
         </sheet>
@@ -20,8 +19,8 @@
     <field name="model">upocampo.puestos</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
+        <field name="id"/>
         <field name="name"/>
-        <field name="nombre"/>
       </tree>
     </field>
   </record>

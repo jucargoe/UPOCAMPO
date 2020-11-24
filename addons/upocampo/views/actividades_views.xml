@@ -7,10 +7,9 @@
         <sheet layout="auto">
           <group>
             <field name="name"/>
-            <field name="nombre"/>
             <field name="descripcion"/>
             <field name="duracion"/>
-            <field name="inscripciones_ids" widget="one2many"/> <!-- TODO como se asignan las actividades ya creadas -->
+            <field name="inscripciones_ids" widget="one2many"/>
             <field name="empleado_id"/>
           </group>
         </sheet>
@@ -23,8 +22,8 @@
     <field name="model">upocampo.actividades</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
+        <field name="id"/>
         <field name="name"/>
-        <field name="nombre"/>
         <field name="descripcion"/>
         <field name="duracion"/>
         <field name="empleado_id"/>

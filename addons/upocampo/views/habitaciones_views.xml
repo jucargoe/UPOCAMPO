@@ -7,7 +7,6 @@
         <sheet layout="auto">
           <group>
             <field name="name"/>
-            <field name="estado"/>
             <field name="foto"/>
           </group>
         </sheet>
@@ -20,24 +19,9 @@
     <field name="model">upocampo.habitaciones</field>
     <field name="arch" type="xml">
       <tree string="tree_string">
+        <field name="id"/>
         <field name="name"/>
-        <field name="estado"/>
       </tree>
-    </field>
-  </record>
-
-  <record id="habitaciones_search_view" model="ir.ui.view">
-    <field name="name">upocampo.habitaciones.search</field>
-    <field name="model">upocampo.habitaciones</field>
-    <field name="arch" type="xml">
-      <search>
-        <filter name="search_estado" string="Libre" domain="[('estado','=','libre')]"/>
-        <filter name="search_estado" string="Ocupado" domain="[('estado','=','ocupado')]"/>
-        <separator orientation="vertical" />
-        <group expand="0" string="Agrupar por...">
-          <filter name="group_by_estad" string="Estado" context="{'group_by':'estado'}" />
-        </group>
-      </search>
     </field>
   </record>
 
