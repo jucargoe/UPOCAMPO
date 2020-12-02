@@ -12,6 +12,8 @@
             <field name="inscripciones_ids" widget="one2many"/>
             <field name="empleado_id"/>
           </group>
+          <newline></newline>
+          <button name="btn_eliminarInscripciones" string="Eliminar inscripciones" type="object" class="oe_highlight" />
         </sheet>
       </form>
     </field>

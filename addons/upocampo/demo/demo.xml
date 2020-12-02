@@ -1,30 +1,101 @@
 <odoo>
-  <data>
-    <!--
-          <record id="object0" model="upocampo.upocampo">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+  <record id="cliente1" model="upocampo.clientes">
+    <field name="name">DNI-ALBERTO</field>
+    <field name="nombre">Alberto José</field>
+    <field name="apellidos">Molares Serrano</field>
+  </record>
+  <record id="cliente2" model="upocampo.clientes">
+    <field name="name">DNI-DARA</field>
+    <field name="nombre">Dara</field>
+    <field name="apellidos">Hornillo Cruz</field>
+  </record>
 
-          <record id="object1" model="upocampo.upocampo">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+  <record id="descuento1" model="upocampo.descuentos">
+    <field name="name">Descuento minusválidos</field>
+    <field name="porcentaje">20</field>
+  </record>
+  <record id="descuento2" model="upocampo.descuentos">
+    <field name="name">Descuento especial</field>
+    <field name="porcentaje">40</field>
+  </record>
 
-          <record id="object2" model="upocampo.upocampo">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
+  <record id="habitacion1" model="upocampo.habitaciones">
+    <field name="name">1</field>
+  </record>
+  <record id="habitacion2" model="upocampo.habitaciones">
+    <field name="name">2</field>
+  </record>
+  <record id="habitacion3" model="upocampo.habitaciones">
+    <field name="name">3</field>
+  </record>
+  <record id="habitacion4" model="upocampo.habitaciones">
+    <field name="name">4</field>
+  </record>
+  <record id="habitacion5" model="upocampo.habitaciones">
+    <field name="name">5</field>
+  </record>
+  <record id="habitacion6" model="upocampo.habitaciones">
+    <field name="name">6</field>
+  </record>
 
-          <record id="object3" model="upocampo.upocampo">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
+  <record id="puesto1" model="upocampo.puestos">
+    <field name="name">Limpiador</field>
+    <field name="descripcion">Limpiar las instalaciones del hotel</field>
+  </record>
+  <record id="puesto2" model="upocampo.puestos">
+    <field name="name">Gerente</field>
+    <field name="descripcion">Director del hotel</field>
+  </record>
+  <record id="puesto3" model="upocampo.puestos">
+    <field name="name">Recepcionista</field>
+    <field name="descripcion">Atender a los clientes</field>
+  </record>
+  <record id="puesto4" model="upocampo.puestos">
+    <field name="name">Monitor actividad</field>
+    <field name="descripcion">Gestionar las actividades que tenga asignadas</field>
+  </record>
 
-          <record id="object4" model="upocampo.upocampo">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
-  </data>
+  <!-- ==================================================================== -->
+
+
+  <record id="empleado1" model="upocampo.empleados">
+    <field name="name">DNI-FRAN</field>
+    <field name="nombre">Fran</field>
+    <field name="apellidos">Rodriguez de la Peña</field>
+    <field name="puesto_id">4</field>
+    <field name="sueldo">15000</field>
+    <field name="genero">hombre</field>
+    <!--<field name="actividades_ids"></field>-->
+  </record>
+  <record id="empleado2" model="upocampo.empleados">
+    <field name="name">DNI-AURELIO</field>
+    <field name="nombre">Aurelio</field>
+    <field name="apellidos">The Teacher</field>
+    <field name="puesto_id">1</field>
+    <field name="sueldo">1000</field>
+    <field name="genero">hombre</field>
+  </record>
+
+  <record id="actividad1" model="upocampo.actividades">
+    <field name="name">Senderismo</field>
+    <field name="descripcion">Senderimos por Montequinto</field>
+    <field name="duracion">60</field>
+    <field name="empleado_id">1</field>
+  </record>
+
+  <record id="inscripcion1" model="upocampo.inscripciones">
+    <field name="name">1</field>
+    <field name="actividad_id">1</field>
+    <field name="fecha">2020-12-02</field>
+  </record>
+
+  <record id="reserva1" model="upocampo.reservas">
+    <field name="name">1</field>
+    <!--<field name="descuento_id">1</field>-->
+    <field name="precio">200</field>
+    <field name="importeTotal">200</field>
+    <!--<field name="habitaciones_ids">1</field>-->
+    <field name="checkIn">2020-12-01</field>
+    <field name="checkOut">2020-12-03</field>
+  </record>
 </odoo>

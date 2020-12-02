@@ -7,7 +7,7 @@ class Empleados(models.Model):
     _name = 'upocampo.empleados'
     _description = 'Empleados del hotel rural'
 
-    name = fields.Integer('DNI:')
+    name = fields.Char('DNI:')
     nombre = fields.Char('Nombre:')
     apellidos = fields.Char('Apellidos:')
     puesto_id = fields.Many2one('upocampo.puestos', 'Puesto de Trabajo:')
