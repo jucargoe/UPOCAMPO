@@ -20,22 +20,22 @@
   </record>
 
   <record id="habitacion1" model="upocampo.habitaciones">
-    <field name="name">1</field>
+    <field name="name">1A</field>
   </record>
   <record id="habitacion2" model="upocampo.habitaciones">
-    <field name="name">2</field>
+    <field name="name">2B</field>
   </record>
   <record id="habitacion3" model="upocampo.habitaciones">
-    <field name="name">3</field>
+    <field name="name">3A</field>
   </record>
   <record id="habitacion4" model="upocampo.habitaciones">
-    <field name="name">4</field>
+    <field name="name">4B</field>
   </record>
   <record id="habitacion5" model="upocampo.habitaciones">
-    <field name="name">5</field>
+    <field name="name">5C</field>
   </record>
   <record id="habitacion6" model="upocampo.habitaciones">
-    <field name="name">6</field>
+    <field name="name">6F</field>
   </record>
 
   <record id="puesto1" model="upocampo.puestos">
@@ -81,6 +81,7 @@
     <field name="descripcion">Senderimos por Montequinto</field>
     <field name="duracion">60</field>
     <field name="empleado_id">1</field>
+    <field name="fecha">2021-02-23</field>
   </record>
 
   <record id="inscripcion1" model="upocampo.inscripciones">

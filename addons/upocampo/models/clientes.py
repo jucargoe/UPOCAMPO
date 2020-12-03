@@ -13,14 +13,14 @@ class Clientes(models.Model):
     reservas_ids = fields.One2many('upocampo.reservas', 'name', 'Reservas:')
     inscripciones_ids = fields.One2many('upocampo.inscripciones', 'name', 'Inscripciones:')
 
-    #_sql_constraints = [('clientes_name_unique','UNIQUE (name)','El DNI debe ser único')]
+    _sql_constraints = [('clientes_name_unique','UNIQUE (name)','El DNI debe ser único')]
 
-    #@api.constrains('nombre')
-    #def _check_nombre(self):
-    #    if self.nombre == "" or self.nombre == None:
-    #        raise models.ValidationError('Campo nombre requerido')
+    @api.constrains('nombre')
+    def _check_nombre(self):
+        if self.nombre == False:
+            raise models.ValidationError('Campo nombre requerido')
 
-    #@api.constrains('apellidos')
-    #def _check_apellidos(self):
-    #    if self.apellidos == "" or self.apellidos == None:
-    #        raise models.ValidationError('Campo apellidos requerido')
+    @api.constrains('apellidos')
+    def _check_apellidos(self):
+        if self.apellidos == False:
+            raise models.ValidationError('Campo apellidos requerido')

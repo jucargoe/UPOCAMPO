@@ -9,6 +9,7 @@
             <field name="name"/>
             <field name="descripcion"/>
             <field name="duracion"/>
+            <field name="fecha"/>
             <field name="inscripciones_ids" widget="one2many"/>
             <field name="empleado_id"/>
           </group>
@@ -28,6 +29,7 @@
         <field name="name"/>
         <field name="descripcion"/>
         <field name="duracion"/>
+        <field name="fecha"/>
         <field name="empleado_id"/>
       </tree>
     </field>

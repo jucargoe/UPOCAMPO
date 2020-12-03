@@ -12,6 +12,7 @@ class Actividades(models.Model):
     duracion = fields.Float('Duracion:')
     inscripciones_ids = fields.One2many('upocampo.inscripciones', 'actividad_id', 'Inscripciones:')
     empleado_id = fields.Many2one('upocampo.empleados', 'Empleado:')
+    fecha = fields.Datetime('Fecha:')
 
     @api.onchange('duracion')
     def onchange_duracion(self):
@@ -27,5 +28,12 @@ class Actividades(models.Model):
         if valido == False:
             raise models.ValidationError('Tienes que asignar un empleado')
         
+    @api.constrains('fecha')
+    def _check_fecha(self):
+        if self.fecha == False or (self.fecha != False and self.fecha < fields.Datetime.now()):
+            raise models.ValidationError('La fecha no puede ser anterior a la actual')
+    
     def btn_eliminarInscripciones(self):
           self.write({'inscripciones_ids':[(5,)]})
+
+    
