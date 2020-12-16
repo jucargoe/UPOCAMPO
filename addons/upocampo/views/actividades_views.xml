@@ -9,9 +9,12 @@
             <field name="name"/>
             <field name="descripcion"/>
             <field name="duracion"/>
+            <field name="fecha"/>
             <field name="inscripciones_ids" widget="one2many"/>
             <field name="empleado_id"/>
           </group>
+          <newline></newline>
+          <button name="btn_eliminarInscripciones" string="Eliminar inscripciones" type="object" class="oe_highlight" />
         </sheet>
       </form>
     </field>
@@ -26,6 +29,7 @@
         <field name="name"/>
         <field name="descripcion"/>
         <field name="duracion"/>
+        <field name="fecha"/>
         <field name="empleado_id"/>
       </tree>
     </field>
