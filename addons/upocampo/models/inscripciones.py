@@ -8,7 +8,7 @@ class Inscripciones(models.Model):
 
     name = fields.Many2one('upocampo.clientes', string='Cliente:')
     actividad_id = fields.Many2one('upocampo.actividades', string='ID de Actividad:')
-    fecha = fields.Datetime(compute='_fechaHoy', string="Fecha:", store=True)
+    fecha = fields.Datetime(compute='_fechaHoy', string="Fecha:")
 
     def _fechaHoy(self):
         self.fecha = fields.Datetime.now()

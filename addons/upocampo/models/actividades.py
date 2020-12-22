@@ -36,4 +36,6 @@ class Actividades(models.Model):
     def btn_eliminarInscripciones(self):
           self.write({'inscripciones_ids':[(5,)]})
 
-    
+
+    def btn_generate_report(self):
+        self.env.ref('upocampo.report_actividades').report_action(self)

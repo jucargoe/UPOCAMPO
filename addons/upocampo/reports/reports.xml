@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="report_actividades" string="Actividades report" model="upocampo.actividades" report_type="qweb-pdf" name="upocampo.report_actividad" />
+    <report id="report_clientes" string="Clientes report" model="upocampo.clientes" report_type="qweb-pdf" name="upocampo.report_cliente" />
+</odoo>

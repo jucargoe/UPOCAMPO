@@ -29,3 +29,6 @@ class Empleados(models.Model):
 
     def btn_eliminarActividades(self):
         self.write({'actividades_ids':[(5,)]})
+
+    #def btn_generate_report(self):
+    #    self.env.ref('upocampo.report_empleados').report_action(self)

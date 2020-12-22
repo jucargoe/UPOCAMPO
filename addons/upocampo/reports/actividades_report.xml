@@ -1,0 +1,69 @@
+<odoo>
+    <template id="report_actividad">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div class="oe_structure" />
+                    <t t-foreach="docs" t-as="doc">
+                        <div style="height: 100%; padding: 20px;">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <img src="https://www.upo.es/cms1/export/sites/upo/comunicacion/imagenes/mic-upo-descargas/Marca-UPO-Horizontal.png" style="width: 200px;" alt="test" />
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-xs-12">
+                                    <table class="table table-striped" style="border: 1px solid; border-collapse: collapse; margin-top: 20px;">
+                                        <tr>
+                                            <td style="border: 2px solid; padding: 10px;">
+                                                <p style="color: #080A67; font-size: 20px;">
+                                                    Nombre de Actividad: <span style="color: black;" t-field="doc.name"/>
+                                                </p>
+                                            </td>
+                                            <td style="border: 2px solid; padding: 10px;" colspan="2">
+                                                <p style="color: #080A67; font-size: 20px;">
+                                                    Descripcion: <span style="color: black;" t-field="doc.descripcion"/>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: 2px solid; padding: 10px;" colspan="3">
+                                                <p t-if="doc.inscripciones_ids" style="color: #080A67; font-size: 20px;">
+                                                    Inscripciones
+                                                </p>
+                                                <t t-if="doc.inscripciones_ids" t-foreach="doc.inscripciones_ids" t-as="inscripcion">
+                                                    <p t-if="doc.inscripciones_ids" style="color: black; font-size: 20px;">
+                                                        DNI: <span t-field="inscripcion.name"/>
+                                                        <t t-if="inscripcion.fecha">, Fecha: <span t-field="inscripcion.fecha"/></t>
+                                                    </p>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: 2px solid; padding: 10px;">
+                                                <p style="color: #080A67; font-size: 20px;">
+                                                    Duracion: <span style="color: black;" t-field="doc.duracion"/>
+                                                </p>
+                                            </td>
+                                            <td style="border: 2px solid; padding: 10px;">
+                                                <p style="color: #080A67; font-size: 20px;">
+                                                    Empleado: <span style="color: black;" t-field="doc.empleado_id"/>
+                                                </p>
+                                            </td>
+                                            <td style="border: 2px solid; padding: 10px;">
+                                                <p style="color: #080A67; font-size: 20px;">
+                                                    Fecha: <span style="color: black;" t-field="doc.fecha"/>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
