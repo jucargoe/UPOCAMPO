@@ -7,7 +7,7 @@ class Clientes(models.Model):
     _name = 'upocampo.clientes'
     _description = 'Clientes del hotel rural'
 
-    name = fields.Char('DNI:', required=True, help="El DNI es requerido") 
+    name = fields.Char('DNI:', required=True, help="El DNI es requerido", size=9) 
     nombre = fields.Char('Nombre:')
     apellidos = fields.Char('Apellidos:')
     reservas_ids = fields.One2many('upocampo.reservas', 'name', 'Reservas:')
@@ -24,3 +24,6 @@ class Clientes(models.Model):
     def _check_apellidos(self):
         if self.apellidos == False:
             raise models.ValidationError('Campo apellidos requerido')
+
+    def btn_generate_report(self):
+        self.env.ref('upocampo.report_clientes').report_action(self)

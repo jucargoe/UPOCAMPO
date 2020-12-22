@@ -1,0 +1,23 @@
+<odoo>
+    <template id="report_cliente">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div style="background-color: #3f3f40; height: 100%; padding: 20px;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <img src="https://www.upo.es/cms1/export/sites/upo/comunicacion/imagenes/mic-upo-descargas/Marca-UPO-Horizontal.png" style="width: 200px;" alt="test" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p style="color: #7975ff; font-size: 20px;">DNI: <span style="color: white;" t-field="doc.name"/></p>
+                            <p style="color: #7975ff; font-size: 20px;">Nombre: <span style="color: white;" t-field="doc.nombre"/></p>
+                            <p style="color: #7975ff; font-size: 20px;">Apellidos: <span style="color: white;" t-field="doc.apellidos"/></p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
